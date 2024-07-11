@@ -7,13 +7,12 @@
 }
 
 body{
-    min-height: 100vh;
-    background: url('./imgs/background.jpg') center / cover;
     display: flex;
+    min-height: 100vh;
     align-items: center;
     justify-content: center;
+    background: url('./imgs/background.jpg') center / cover;
 }
-
 main.table{
     width: 82vw;
     height: 90vh;
@@ -31,17 +30,33 @@ main.table{
     padding: .8rem 1rem;
     background-color: #fff9;
 
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
-.table__body{
-    width: 95%;
-    max-height: calc(89% - 1.6rem);
-    background-color: #fff;
+input, select{
+    padding: 9px;
+    border: none;
+    outline: none;
+    border-radius: 7px;
+    background-color: #FFF;
+    border: 2px solid #CECECE;
+}
 
-    margin: .8rem auto;
-    border-radius: .6rem;
+.table__body {
+    width: 100%;
+    max-height: 85%;
+
+    padding: 0 20px;
     
+    background-color: #fffb;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+
+    overflow: overlay;
     overflow: auto;
+    
 }
 
 .table__body::-webkit-scrollbar{
@@ -56,8 +71,7 @@ main.table{
 }
 
 .table__body:hover::-webkit-scrollbar-thumb{
-    visibility: hidden;
-    
+    visibility: hidden; 
 }
 
 table{
@@ -69,8 +83,10 @@ td img{
     height: 35px;
     
     border-radius: 50%;
-    background-color: yellow;
-    vertical-align: middle;
+    transition: .7s
+}
+td img:hover{
+    transform: scale(3.5);
 }
 
 table, th, td{
@@ -84,7 +100,7 @@ thead th{
     top: 0;
     left: 0;
     position: sticky;
-    background-color: #0001;
+    background-color: rgb(185, 180, 201);
 }
 
 tbody tr:nth-child(even){
@@ -99,6 +115,12 @@ tbody tr:hover{
     text-align: center;
     padding: .4rem 0;
     border-radius: 2rem;
+    transition: .7s;
+}
+.status:hover{
+    color: #fff !important;
+    font-weight: 700;
+    transform: scale(1.2);
 }
 .status.delivered{
     background-color: #86e49d;
@@ -117,12 +139,28 @@ tbody tr:hover{
     background-color: #6fcaea;
 }
 
-tbody tr td.img__width{
-    width: 35px !important;
-}
-
 @media(max-width: 1000px){
     t:not(:first-of-type){
         min-width: 12.1rem;
+    }
+}
+
+@media(max-width: 900px){
+    .table__filter{
+        background-color: red;
+        display: none;
+    }
+    h1{
+        font-size: 25px;
+    }
+    .table__header{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .table__body{
+        width: 100%;
+        margin-left: -10px;
+        font-size: 12px;
     }
 }

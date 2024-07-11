@@ -10,16 +10,23 @@
     <main class="table">
         <div class="table__header">
             <h1>Cadastro de Funcionários</h1>
+            <div class="table__filter">
+                <select >
+                    <option value="categoria">categoria</option>
+                    <option value="nome">nome</option>
+                </select>
+                <input type="search" placeholder="buscar ..." >
+            </div>
         </div>
         <div class="table__body">
             <table>
                 <thead>
-                    <tr>
-                        <th>ID</th>
+                    <tr class="tr__thead">
+                        <th class="img__width">ID</th>
                         <th class="img__width">Imagem</th>
                         <th>Nome</th>
                         <th>Cadastro</th>
-                        <th>Status</th>
+                        <th>Categoria</th>
                         <th>Salario</th>
                     </tr>
                 </thead>
