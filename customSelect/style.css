@@ -1,0 +1,90 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --bg--primary: #0C0C0D;
+    --fc--primary: #EDEAF0;
+}
+
+
+html, body{
+    font-family: "Roboto", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    color: var(--fc--primary);
+    background-color: var(--bg--primary);
+
+    font-synthesis: none;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-text-size-adjust: 100%
+}
+.select{
+    padding: 6rem;
+}
+#category-select label{
+    font-size: 0.75rem;
+    letter-spacing: 0.033rem;
+}
+#select-button{
+    margin-top: .5rem;
+    display: flex;
+    padding: 0.75rem;
+    align-items: center;
+    justify-content: space-between;
+
+    border-radius: .4rem;
+    border: 1px solid #252529;
+    background-color: #17171A;
+}
+#selected-value{
+    color: #AFABB6;
+    font-size: 0.9rem;
+    letter-spacing: 0.03rem;
+}
+#chevrons svg{
+    width: 1rem;
+    height: 1rem;
+}
+#chevrons{
+    color: #AFABB6;
+}
+#chevrons [data-lucide="chevron-up"]{
+    display: none;
+}
+#options-view-button:focus + #select-button,
+#options-view-button:checked + #selected-button{
+    outline: 1px solid #A881E6;
+}
+#category-select:has(#options-view-button:checked) label,
+#options-view-button:checked + #select-button #chevrons{
+    color: #A881E6;
+}
+#options-view-button:checked + #select-button #chevrons
+[data-lucide="chevron-down"]{
+    display: none;
+}
+#option-view-button:checked + #select-button #chevrons
+[data-lucide="chevron-up"]{
+    display: block;
+}
+#category-select{
+    position: relative;
+}
+#options-view-button{
+    all: unset;
+
+    position: absolute;
+    /* inset: 0; */
+
+    cursor: pointer;
+    z-index: 3;
+
+    border: 1px solid red;
+}

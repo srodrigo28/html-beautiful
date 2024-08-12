@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Select Custom</title>
+</head>
+<body>
+    <div class="select">
+        <div id="category-select">
+            <label for="options-view-button">Categoria</label>
+            <input type="checkbox" id="options-view-button">
+
+            <div id="select-button">
+                <div id="selected-value">Selecione a categoria</div>
+                
+                <div id="chevrons">
+                    <i data-lucide="chevron-down"></i>
+                    <i data-lucide="chevron-up"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://unpkg.com/lucide@0.427.0/dist/umd/lucide.min.js"></script>
+    <script>
+        lucide.createIcons()
+    </script>
+</body>
+</html>
