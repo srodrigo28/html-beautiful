@@ -5,13 +5,10 @@
     padding: 0;
     box-sizing: border-box;
 }
-
 :root{
     --bg--primary: #0C0C0D;
     --fc--primary: #EDEAF0;
 }
-
-
 html, body{
     font-family: "Roboto", sans-serif;
     font-weight: 300;

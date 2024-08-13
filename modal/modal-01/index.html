@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modal 03</title>
+</head>
+<body>
+    <button class="open-modal" data-modal="modal-1"> open-modal </button>
+    
+    <dialog id="modal-1">
+        <form>
+
+            <div class="modal-header">
+                <div class="modal-title"> <h3>Sign in to our plataform</h3> </div>
+                <button class="close-modal" data-modal="modal-1" type="button">x</button>
+            </div>
+
+            <div class="modal-body">
+                <div class="input-group">
+                    <label for="email"></label>
+                    <input type="email" id="email" name="email" placeholder="name@gmail.com"/>
+                </div>
+                <div class="input-group">
+                    <label for="password"></label>
+                    <!-- 0149 modar a bolinha-->
+                    <input type="password" id="password" name="password" placeholder="*********"/>
+                </div>
+                <div class="password-options">
+                    <div class="remember-password">
+                        <input type="checkbox" name="remember_password" id="remember_password">
+                        <label for="remember_password">Rember password ?</label>
+                    </div>
+                    <a href="#" class="forgot-password">
+                        Forgot password ?
+                    </a>
+                </div>
+
+                <button id="login_button">
+                    Login to your account
+                </button>
+
+                <div class="register">
+                    <span>Not registered ?</span>
+                    <a href="#">
+                        Login here
+                    </a>
+                </div>
+            </div>
+
+        </form>
+    </dialog>
+
+    <script src="./script.js"></script>
+</body>
+</html>

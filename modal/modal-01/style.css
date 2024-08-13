@@ -1,0 +1,120 @@
+
+*:not(dialog){
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root{
+    --background-01: #6366f1;
+    --background-white: #fff
+}
+html, body:not(dialog){
+    width: 100vw;
+    min-height: 100vh;
+    font-family: 'Roboto', Times, serif;
+    background-color: var(--background-01);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.open-modal{ 
+    color: var(--background-01);
+    cursor: pointer;
+    border: none;
+    border-radius: 8px;
+    padding: 10px 16px;
+    font-size: 14px;
+    font-weight: 700;
+    background-color: var(--background-white);
+
+}
+dialog::backdrop{
+    background-color: rgba(0,0,0,0.5);
+}
+dialog{
+    border: none;
+    width: 250px;
+    border-radius: 24px;
+    padding: 18px;
+}
+.modal-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 16px;
+}
+.modal-title{
+    font-size: 20px;
+    font-weight: 500px;
+    color: #6b7280;
+}
+.close-modal{
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    border: none;
+    color: #fff;
+    background-color: red;
+    padding: 5px;
+    border-radius: 10px;
+    font-size: 18px;
+}
+.modal-body{
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+.input-group{
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+.input-group label{
+    font-size: 14px;
+    font-weight: 500;
+    color: #111928;
+}
+.input-group input{
+    border: 1px solid #d1d5db;
+    background-color: #f9fafb;
+    border-radius: 8px;
+    padding: 10px 16px;
+}
+.pint-group input:focus{ /** very back*/
+    outline: 1px solid #6366f1;
+}
+#login_button{
+    color: #fff;
+    padding: 10px;
+    cursor: pointer;
+    font-weight: 700;
+    border-radius: 10px;
+    background-color: #6366f1;   
+}
+.password-options{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.remember-password{
+    gap: 4px;
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    color: #111928;
+}
+.forgot-password{
+    font-size: 12px;
+    color: #6366f2;
+    text-decoration: none;
+}
+.register span{
+    font-size: 14px;
+    color: #6b7280;
+}
+.register a{
+    font-size: 14px;
+    color: #6366f2;
+    text-decoration: none;
+}

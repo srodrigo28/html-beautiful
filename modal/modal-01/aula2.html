@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modal 02</title>
+</head>
+<body>
+    <button class="open-modal" data-modal="modal-1"> open-modal </button>
+    <button class="open-modal" data-modal="modal-2"> open-modal </button>
+
+    <dialog id="modal-1">
+        <h1>teste 1</h1>
+        <button class="close-modal" data-modal="modal-1">
+            x
+        </button>
+    </dialog>
+    <dialog id="modal-2"> 
+        <h1>teste 2</h1>
+        <button class="close-modal" data-modal="modal-2">
+            x
+        </button>
+    </dialog>
+
+    <script>
+        // alert('hello')
+        const openButtons = document.querySelectorAll('.open-modal')
+        openButtons.forEach(button => {
+            button.addEventListener("click", () => {
+                const modalId = button.getAttribute('data-modal')
+                const modal = document.getElementById(modalId)
+                console.log(modal)
+
+                modal.showModal()
+            })
+        })
+
+        const closeButtons = document.querySelectorAll('.close-modal')
+        closeButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                const modalId = button.getAttribute('data-modal')
+                const modal = document.getElementById(modalId)
+
+                modal.close();
+            })
+        })
+
+    </script>
+</body>
+</html>
