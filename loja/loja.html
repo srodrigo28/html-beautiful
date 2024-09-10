@@ -1,0 +1,343 @@
+<!-- https://www.remove.bg/pt-br -->
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <title>Loja</title>
+</head>
+<body>
+    <main>
+        <section id="section-left">
+            <article class="vitrini">
+                <img src="./img/poltrona/outs/principal-2.png" alt="">
+            </article>
+            <article class="vitrini-item">
+                <img src="./img/poltrona/outs/item-1.png" alt="">
+                <img src="./img/poltrona/outs/item-2.png" class="ajust-img" alt="">
+                <img src="./img/poltrona/outs/item-3.png" alt="">
+            </article>
+        </section>
+        <section id="section-right">
+            <header>
+                <h3>poltrona</h3>
+                <h1>Poltrona Amarela Moderna</h1>
+                <span>Sala de estar</span>
+                <div class="row">
+                    <strong>R$ 399</strong>
+                    <div class="avaliation">
+                        <ion-icon class="star-mark" name="star"></ion-icon>
+                        <ion-icon class="star-mark" name="star"></ion-icon>
+                        <ion-icon class="star-mark" name="star"></ion-icon>
+                        <ion-icon class="star-mark" name="star"></ion-icon>
+                        <ion-icon class="star" name="star"></ion-icon>
+                    </div>
+                </div>
+            </header>
+            <div class="tabs">
+                <div class="tabs-buttons">
+                    <button id="btn-descricao" onclick="fn__descricao()">Descrição</button>
+                    <button id="btn-detalhes" onclick="fn__detalhes()">Detalhes</button>
+                </div>
+                <div id="tabs-content">
+                    <div id="tabs-detalhes">
+                        <article>
+                            <p>Dimessões: 90cm largura, 70cm de altura e 76cm de profundidade.</p>
+                            <p>Material dos pés: Eucalipto.</p>
+                        </article>
+                        <form>
+                            <select>
+                                <option value="Vermelho">Vermelho</option>
+                            </select>
+                            <select>
+                                <option value="unidades">2 unid.</option>
+                            </select>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <footer>
+                <button>Adicionar a Lista de Desejos</button>
+                <button class="selected">Adicionar ao carrinho</button>
+            </footer>
+        </section>
+    </main>
+
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            display: flex;
+            
+            align-items: center;
+            justify-content: center;
+            background-color: black;
+        }
+        main{
+            display: flex;
+            width: 80%;
+            height: 100vh;
+            justify-content: center;
+            align-items: center;
+        }
+        header{
+            gap: 10px;
+            display: flex;
+            flex-direction: column;
+        }
+        header h3{
+            color: goldenrod;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+        header h1{
+            color: white;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+        header span{
+            color: #c1c1c1;
+            font-size: 18px;
+            margin-left: 10px;
+            font-style: italic;
+        }
+        header strong{
+            font-size: 25px;
+            color: white;
+        }
+        #section-left{
+            padding: 30px;
+            width: 50%;
+            height: 80vh;
+            background-color: white;
+
+            display: flex;
+            gap: 10px;
+            flex-direction: column;
+        }
+        #section-right{
+            padding: 30px;
+            width: 50%;
+            height: 80vh;
+            background-color: #1c1c1c;
+        }
+        .vitrini{
+            height: 70vh;
+            width: 100%;
+        }
+        .vitrini img{
+            width: 100%;
+        }
+        .vitrini-item{
+            height: 15vh;
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+            align-items: center;
+        }
+        .vitrini-item img{
+            cursor: pointer;
+            width: 20%;
+            transition: .9s;
+            opacity: .5;
+        } 
+        .vitrini-item img:hover{
+            opacity: 1;
+            transform: scale(1.1);
+        }
+        .ajust-img{ height: 110px;}
+        header .row{
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+        }
+        ion-icon{
+            cursor: pointer;
+            font-size: 20px;
+            transition: .9s;
+        }
+        ion-icon:hover{
+            color: gold;
+            transform: rotate(70deg);
+        }
+        .star{
+            color: white;
+        }
+        .star-mark{
+            color: gold;
+        }
+        .tabs-buttons{
+            margin-top: 10px;
+            margin-bottom: 10px;
+            height: 35px;
+            gap: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .tabs-buttons button{
+            height: 100%;
+            color: white;
+            width: 50%;
+            cursor: pointer;
+            background-color: transparent;
+            font-weight: bold;
+            transition:.9s;
+        }
+        .tabs-buttons button:hover{
+            color: goldenrod;
+            border-bottom: 5px solid goldenrod;
+        }
+        .tabs-buttons-active{
+            color: goldenrod;
+            border-bottom: 5px solid goldenrod;
+        }
+        .tabs-content{
+            height: 260px;
+        }
+        .hide{
+            display: none;
+        }
+        #tabs-detalhes{
+            color: #fff;
+            gap: 10px;
+            display: flex;
+            flex-direction: column;
+            padding: 20px;
+        }
+        #tabs-detalhes article{
+            padding: 0px 10px;
+
+        }
+        #tabs-detalhes form{
+            
+            width: 100%;
+            height: 33vh;
+
+            gap: 10px;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+        }
+        #tabs-detalhes form p{
+            padding: 20px;
+            background-color: red;
+        }
+        #tabs-detalhes form select{
+            width: 50%;
+            color: #fff;
+            padding: 10px;
+            height: 40px;
+            border-radius: 25px;
+            background-color: transparent;
+        }
+        footer{
+            width: 36%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            gap: 10px;
+            position: absolute;
+            bottom: 90px;
+            padding-right: 20px;
+        }
+        footer button{
+            height: 40px;
+            border-radius: 20px;
+            width: 100%;
+            cursor: pointer;
+            color: white;
+            background-color: #000;
+            border: 2px solid white;
+            transition: .9s;
+        }
+        footer button:hover{
+            color: #000;
+            font-weight: bold;
+            background-color: greenyellow;
+        }
+        .selected{
+            color: #1c1c1c;
+            border: none;
+            background-color: goldenrod;
+        }
+        @media screen and (max-width: 1920px){
+            main{
+                flex-direction: row;
+            }
+            .vitrini{
+                height: 60vh;
+                width: 100%;
+            }
+            .vitrini img{
+                margin-top: 0px;
+                height: 22em;
+            }
+            footer{
+                position: absolute;
+                bottom: 100px;
+                padding-right: 20px;
+            }            
+        }
+        @media screen and (max-width: 1400px){
+            main{
+                flex-direction: row;
+            }
+            .vitrini{
+                height: 70vh;
+                width: 100%;
+            }
+            .vitrini img{
+                margin-top: 0px;
+            }
+            footer{
+                position: absolute;
+                bottom: 100px;
+                padding-right: 20px;
+            }            
+        }
+        @media screen and (max-width: 849px){
+            main{
+                flex-direction: column;
+            }
+            .vitrini{
+                height: 70vh;
+                width: 100%;
+            }
+            .vitrini img{
+                margin-top: 180px;
+            }
+            footer{
+                position: absolute;
+                bottom: -180px;
+                padding-right: 20px;
+            }            
+        }
+    </style>
+
+    <script>
+        function fn__descricao(){
+            var btn = document.getElementById("btn-descricao");
+            btn.classList.toggle("tabs-buttons-active");
+
+            var content = document.querySelector("#tabs-content");
+            content.classList.toggle("hide")
+            console.log(content);
+        }
+        function fn__detalhes(){
+            var btn = document.getElementById("btn-detalhes");
+            btn.classList.toggle("tabs-buttons-active");
+
+            var content = document.querySelector("#tabs-content");
+            content.classList.toggle("hide")
+            console.log(content);
+        }
+    </script>
+</body>
+</html>
