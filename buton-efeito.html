@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Button</title>
+</head>
+<body>
+    <button class="btn-menu" id="btn-menu" onclick="animar()">
+        <span class="linha"></span>
+        <span class="linha"></span>
+        <span class="linha"></span>
+    </button>
+
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            width: 100vm;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #1c1c1c;
+        }
+
+        .btn-menu{
+            width: 10em;
+            height: 10em;
+            cursor: pointer;
+            /* border-radius: 50%; */
+            border: 7px solid #ccc;
+            /* padding-bottom: 20px; */
+            background-color: transparent;
+
+      
+        }
+        .linha{
+            width: 5em;
+            height: 7px;
+            display: block;
+            margin: 20px auto;
+            border-radius: 5px;
+            background-color: #ccc;
+            transform-origin: center;
+
+            transition: .3s;
+        }
+        button.ativar1{
+            transform: rotate(90deg);
+            background-color: #4caf50;
+            transition: transform 3s;
+        }
+        button.ativar{
+           border: 7px solid red
+        }
+        button.ativar .linha:nth-child(1) {
+            transform: translateY(36px) rotate(-45deg);
+            background-color: red;
+        }
+        button.ativar .linha:nth-child(3) {
+            transform: translateY(-18px) rotate(45deg);
+            background-color: red;
+        }
+
+        button.ativar .linha:nth-child(2) {
+           width: 0;
+        }
+
+    </style>
+
+    <script>
+        const btn = document.querySelector('#btn-menu')
+        
+        function animar(){
+            btn.classList.toggle('ativar')
+        }
+    </script>
+</body>
+</html>
