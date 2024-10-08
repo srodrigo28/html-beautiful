@@ -3,11 +3,15 @@
 
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="style.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script> <!-- Animação -->
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" /> <!-- Animação -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" />
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js" integrity="sha512-VEd+nq25CkR676O+pLBnDW09R7VQX9Mdiij052gVCp5yVH3jGtH70Ho/UUv4mJDsEdTvqRCFZg0NKGiojGnUCw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css" integrity="sha512-vKMx8UnXk60zUwyUnUPM3HbQo8QfmNx7+ltw8Pm5zLusl1XIfwcxo8DbWCqMGKaWeNxWA8yrx5v3SaVpMvR3CA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
     <title>Kanban</title>
 </head>
 
@@ -713,13 +717,13 @@
                 width: 350px;
             }
             .modal{
-                margin-left: 50px;
+                margin-right: 20px;
                 width: 80%;
             }
         }
     </style>
     <script>
-        AOS.init(); //inicial a aniamação
+        AOS.init(); //inicial a animação
         const medio = document.querySelectorAll('.with-js')
         const small = document.querySelectorAll('.with-small-js')
         const limitSmall = 5
@@ -741,9 +745,20 @@
         let btnPrimary = document.querySelector('.btn');
         let btnFechar = document.querySelector('.fechar');
         const modal = document.querySelector("#janela-modal");
+        const btnCad = document.querySelector("#cadastrar");
+
+        btnCad.onclick = () => {
+            toastr.success('Tarefa cadastrada com Sucesso!', "Sucesso")
+            modal.classList.remove('abrir')
+
+            setTimeout( () => {
+                window.location.reload()
+            }, 500)
+        }
 
         function abrirModal() {
-
+            // let nav = document.querySelector('nav')
+            // nav.style.display = "none"
             btnPrimary.style.display = "none";
             modal.classList.add('abrir')
 
@@ -763,7 +778,6 @@
         btnPendente.addEventListener('mouseenter', function(e){
             e.preventDefault()
 
-            
         })
     </script>
 </body>
