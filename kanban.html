@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" />
+    <title>Kanban</title>
+</head>
+
+<body>
+    <div id="app">
+        <nav>
+            <img src="https://static.vecteezy.com/system/resources/previews/019/897/563/non_2x/modern-real-estate-and-construction-logo-free-png.png"
+                alt="">
+            <ul>
+                <li>
+                    <a href="#" class="active">
+                        <i class="fa-solid fa-user"></i>
+                        Usuario
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="active">
+                        <i class="fa-solid fa-users"></i>
+                        Equipe
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="active">
+                        <i class="fa-brands fa-docker"></i>
+                        Reatorios
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="active">
+                        <i class="fa-solid fa-screwdriver-wrench"></i>
+                        Configuracoes
+                    </a>
+                </li>
+            </ul>
+        </nav>
+        <main>
+            <div class="inner">
+                <section class="title-avatar">
+                    <h1>
+                        Minhas tarefas
+                        <i class="fa-solid fa-pen-fancy"></i>
+                    </h1>
+                    <img src="https://avatars.githubusercontent.com/u/183320874?v=4" alt="">
+                </section>
+
+                <section class="filter">
+                    <button>
+                        <i class="fa-solid fa-filter"></i>
+                        <span>Filtrar</span>
+                    </button>
+                    <div class="input-wrapper">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                        <input type="text" placeholder="buscar por tarefas, ou descricoes">
+                    </div>
+                </section>
+
+                <section class="box-tarefas">
+                    <div class="todo">
+                        <h2>A fazer</h2>
+                        <div class="card">
+                            <h3>Treinar HTML5</h3>
+                            <p>
+                                Desafio todo dia praticar, desenvolvendo projetos
+                            </p>
+                            <span class="data">20/10/2024</span>
+                            <div class="tags">
+                                <span>Treina-dev</span>
+                                <span>Outras fontes</span>
+                            </div>
+                        </div>
+
+                        <div class="card">
+                            <h3>Treinar HTML5</h3>
+                            <p>
+                                Desafio todo dia praticar, desenvolvendo projetos
+                            </p>
+                            <span class="data">20/10/2024</span>
+                            <div class="tags">
+                                <span>Treina-dev</span>
+                                <span>Outras fontes</span>
+                            </div>
+                        </div>
+
+                        <div class="card">
+                            <h3>Treinar HTML5</h3>
+                            <p>
+                                Desafio todo dia praticar, desenvolvendo projetos
+                            </p>
+                            <span class="data">20/10/2024</span>
+                            <div class="tags">
+                                <span>Treina-dev</span>
+                                <span>Outras fontes</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="doing">
+                        <h2>Fazendo</h2>
+                        <div class="card">
+                            <h3>Treinar HTML5</h3>
+                            <p>
+                                Desafio todo dia praticar, desenvolvendo projetos
+                            </p>
+                            <span class="data">20/10/2024</span>
+                            <div class="tags">
+                                <span>Treina-dev</span>
+                                <span>Outras fontes</span>
+                            </div>
+                        </div>
+
+                        <div class="card">
+                            <h3>Treinar HTML5</h3>
+                            <p>
+                                Desafio todo dia praticar, desenvolvendo projetos
+                            </p>
+                            <span class="data">20/10/2024</span>
+                            <div class="tags">
+                                <span>Treina-dev</span>
+                                <span>Outras fontes</span>
+                            </div>
+                        </div>
+
+                        <div class="card">
+                            <h3>Treinar HTML5</h3>
+                            <p>
+                                Desafio todo dia praticar, desenvolvendo projetos
+                            </p>
+                            <span class="data">20/10/2024</span>
+                            <div class="tags">
+                                <span>Treina-dev</span>
+                                <span>Outras fontes</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="done">
+                        <h2>Feito</h2>
+                        <div class="card">
+                            <h3>Treinar HTML5</h3>
+                            <p class="with-js">
+                                Desafio todo dia praticar, desenvolvendo projetos
+                            </p>
+                            <span class="data">20/10/2024</span>
+                            <div class="tags">
+                                <span>Treina-dev</span>
+                                <span>Outras fontes</span>
+                            </div>
+                        </div>
+
+                        <div class="card">
+                            <h3>Treinar HTML5</h3>
+                            <p class="with-js">
+                                Desafio todo dia praticar, desenvolvendo projetos
+                            </p>
+                            <span class="data">20/10/2024</span>
+                            <div class="tags">
+                                <span>Treina-dev</span>
+                                <span>Outras fontes</span>
+                            </div>
+                        </div>
+
+                        <div class="card">
+                            <h3>Treinar HTML5</h3>
+                            <p class="with-js">
+                                Desafio todo dia praticar, desenvolvendo projetos, Desafio todo dia praticar,
+                                desenvolvendo projetos
+                            </p>
+                            <span class="data">20/10/2024</span>
+                            <div class="tags">
+                                <span>Treina-dev</span>
+                                <span>Outras fontes</span>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </main>
+    </div>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+
+            -webkit-font-smoothing: antialised;
+            -moz-osx-font-smoothing: grayscale;
+
+            list-style: none;
+            text-decoration: none;
+        }
+
+        :root {
+            font-size: 62.5%;
+        }
+
+        body {
+            font-size: 1.6rem;
+            color: #fff;
+            font-weight: 600;
+            background-color: black;
+            /* background-color: #7c3AED; */
+        }
+
+        #app {
+            display: grid;
+            grid-template-columns: max-content 1fr;
+            min-height: 100vh;
+        }
+
+        .inner {
+            height: 100%;
+            background-color: #1d1d1d;
+            border-top-left-radius: 3.2rem;
+
+            padding: 4rem 3rem;
+        }
+
+        main {
+            padding-top: .8rem;
+        }
+
+        nav {
+            padding: 3rem 3rem;
+            min-height: 7rem;
+
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        nav img {
+            width: 7rem;
+        }
+
+        ul {
+            min-height: 10rem;
+
+            gap: 3rem;
+            display: grid;
+            margin-top: 4rem;
+        }
+
+        li a {
+            color: #fff;
+            font-weight: 600;
+
+            gap: 1.4rem;
+            padding: 10px;
+            display: flex;
+            align-content: center;
+
+            transition: .7s;
+        }
+
+        li a:hover,
+        li a:active {
+            padding: 10px;
+            border-radius: 7px;
+            background-color: #777;
+            transform: scale(1.07) scaleX(5px);
+        }
+
+        /* fim do nav */
+
+        .title-avatar {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .title-avatar img {
+            width: 7rem;
+            border-radius: 50%;
+        }
+
+        .title-avatar h1 {
+            gap: 1.5rem;
+            display: flex;
+            align-items: center;
+        }
+
+        .filter {
+            margin-top: 2rem;
+
+            gap: 1rem;
+            display: flex;
+            align-items: center;
+        }
+
+        .filter button {
+            padding: 1.2rem 2.5rem;
+            border: none;
+            color: #fff;
+            border-radius: 10px;
+            background-color: black;
+
+            gap: 1.3rem;
+            display: flex;
+        }
+
+        .filter span {
+            font-weight: 500;
+            letter-spacing: .12rem;
+            font-size: 1.3rem;
+        }
+
+        .input-wrapper {
+            width: 30%;
+            padding: 10px;
+            border-radius: 5px;
+            background-color: #777;
+
+            display: flex;
+        }
+
+        .input-wrapper input {
+            color: #fff;
+            border: none;
+            outline: none;
+            background-color: transparent;
+            padding-left: 10px;
+            transition: .9s;
+            font-size: 1.6rem;
+            font-weight: 600;
+            letter-spacing: .2rem;
+        }
+
+        .input-wrapper,
+        input:focus,
+        input {
+            width: 100%;
+        }
+
+        .input-wrapper:has(:focus) {
+            border: 3px solid #000;
+        }
+
+        /* box tarefas */
+        .box-tarefas {
+            margin-top: 1.6rem;
+            gap: 1rem;
+            display: flex;
+        }
+
+        .box-tarefas>* {
+            flex: 1;
+            padding: 2.5rem;
+            background-color: #777;
+
+            border-radius: 1rem;
+        }
+
+        .box-tarefas h2 {
+            font-size: 2rem;
+            color: #1d1d1d;
+            padding: 2rem;
+        }
+
+        .card {
+            margin-bottom: 10px;
+            padding: 2rem;
+            border-radius: 1rem;
+            background-color: #fff;
+        }
+
+        .card h3 {
+            color: #777;
+            padding-bottom: .8rem;
+        }
+
+        .card p {
+            font-size: 1.5rem;
+            color: #1d1d1d;
+            font-weight: 600;
+
+            padding-bottom: 1rem;
+        }
+
+        .card .data {
+            color: #fff;
+            font-size: 1.1rem;
+            letter-spacing: .2rem;
+            float: right;
+            border-radius: 3px;
+            padding: .2rem .8rem;
+            background-color: #1d1d1d;
+            margin-bottom: 1rem;
+        }
+
+        .tags {
+            clear: both;
+            margin-top: 1rem;
+            color: #1d1d1d;
+            display: flex;
+            align-items: center;
+            gap: .8rem;
+        }
+
+        .tags span {
+            color: #fff;
+            font-size: 1.1rem;
+            letter-spacing: .2rem;
+            float: right;
+            border-radius: 3px;
+            padding: .5rem .8rem;
+            background-color: #1d1d1d;
+            margin-bottom: 1rem;
+        }
+    </style>
+
+    <script>
+        const items = document.querySelectorAll('.with-js')
+        const limit = 50
+
+        for (let x of items) {
+            const upLimit = x.innerText.length > limit
+            const dotsEmpty = upLimit ? '...' : ''
+            x.innerText = x.innerText.substring(0, limit) + dotsEmpty
+        }
+    </script>
+</body>
+
+</html>
