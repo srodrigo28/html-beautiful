@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <script defer src="./script.js"></script>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calendário</title>
+</head>
+
+<body>
+    <div class="wrapper">
+        <header>
+            <p class="current-date">Outubro 2024</p>
+            <div class="icons">
+                <span id="prev" class="left">
+                    < </span>
+                        <span id="next" class="right"> > </span>
+            </div>
+        </header>
+        <div class="calendar">
+            <ul class="weeks">
+                <li>DOM</li>
+                <li>SEG</li>
+                <li>TER</li>
+                <li>QUA</li>
+                <li>QUI</li>
+                <li>SEX</li>
+                <li>SAB</li>
+            </ul>
+            <ul class="days"></ul>
+        </div>
+    </div>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            display: flex;
+            padding: 50px 20px;
+            justify-content: center;
+            min-height: 100vh;
+            background-color: #000;
+        }
+
+        .wrapper {
+            border-radius: 10px;
+            width: 450px;
+            height: 55vh;
+            background-color: #fff;
+        }
+
+        .wrapper header {
+            display: flex;
+            align-items: center;
+            border-radius: 10px;
+            padding: 15px;
+            justify-content: space-between;
+            color: #fff;
+            background-color: green;
+        }
+
+        .icons {
+            gap: 5px;
+            display: flex;
+            width: 55px;
+        }
+
+        .current-date,
+        .icons span {
+            font-size: .8rem;
+        }
+
+        .icons span {
+            width: 45px;
+            color: #000;
+            background-color: #fff;
+
+            text-align: center;
+            padding: 7px;
+
+            cursor: pointer;
+            border-radius: 50%;
+            opacity: .6;
+            transition: .5s;
+        }
+
+        .icons span:hover {
+            opacity: 1;
+        }
+
+        .calendar {
+            padding: 20px;
+        }
+
+        .calendar ul {
+            display: flex;
+            list-style: none;
+            flex-wrap: wrap;
+            text-align: center;
+        }
+
+        .calendar ul li {
+            position: relative;
+            width: calc(100% / 7);
+        }
+
+        .calendar .days li::before {
+            position: absolute;
+            content: "";
+            height: 40px;
+            width: 40px;
+            top: 50%;
+            left: 50%;
+            z-index: -1;
+            transform: translate(-50%, -50%);
+            border-radius: 50%;
+            background-color: #777;
+        }
+
+        .weeks li {
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+
+        .days {
+            margin-top: 10px;
+        }
+
+        .days li {
+            z-index: 1;
+            cursor: pointer;
+            margin-bottom: 30px;
+            /* espaçamento dos dias */
+            transition: .5s;
+        }
+
+        .days li:hover::before {
+            background-color: #f2f2f2;
+            border: 2px dotted #777;
+        }
+
+        .days li.inactive {
+            color: #aaa;
+        }
+
+        .days li.active {
+            color: #fff;
+        }
+
+        .days li.active::before {
+            font-weight: 700;
+            border: 2px dotted #fff;
+            background-color: blueviolet;
+        }
+    </style>
+
+    <script>
+        const currentDate = document.querySelector(".current-date")
+        let daysTag = document.querySelector(".days")
+        let prevNext = document.querySelectorAll(".icons span")
+        console.log(daysTag)
+        // console.log(currentDate)
+
+        let date = new Date(),
+            currYear = date.getFullYear(),
+            currMonth = date.getMonth();
+
+        // console.log(date, currYear, currMonth)
+
+        const months = [
+            "Janeiro", "Fevereiro", "Março", "Abril", "Maio", "Junho",
+            "Julho", "Agosto", "Setembro", "Outubro", "Novembro", "Dezembro"
+        ]
+
+        const renderCalendar = () => {
+            let lasDateOfMonth = new Date(currYear, currMonth + 1, 0).getDate();
+            let liTag = "";
+            // console.log(lasDateOfMonth)
+
+            for (let i = 1; i <= lasDateOfMonth; i++) {
+                // console.log(i)
+                liTag += `<li>${i}</li>`
+            }
+            currentDate.innerText = `${months[currMonth]} ${currYear}`;
+            daysTag.innerHTML = liTag
+        }
+
+        renderCalendar();
+
+        prevNext.forEach(icon => {
+            icon.addEventListener("click", () => {
+                // console.log(icon)
+                // verifica se button é igual a prev caso sim decrementa caso contrario incrementa
+                currMonth = icon.id === "prev" ? currMonth - 1 : currMonth + 1;
+                renderCalendar();
+            })
+        })
+    </script>
+</body>
+
+</html>
