@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>App Black</title>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <img src="./image/back.png" alt="show icone back">
+            <h1>App Control</h1>
+            <img src="./image/control.png" alt="show icone control">
+        </header>
+        
+        <section class="balance">
+            <div class="balance-item">
+                <h4>Saldo</h4>
+                <h2>R$ 100.000,00</h2>
+            </div>
+            <img src="./image/eyesHidden.png" alt="show icone balance">
+        </section>
+        
+        <h3>Histórico</h3>
+        
+        <section class="items">
+            <button> D </button>
+            <div class="item-description">
+                <h3>Energia Enel</h3>
+                <p>Data: 25/10/2024</p>
+            </div>
+            <h2 class="item-total"> R$ 1.000,00 </h2>
+        </section>
+        
+        <section class="items">
+            <button> D </button>
+            <div class="item-description">
+                <h3>Energia Enel</h3>
+                <p>Data: 25/10/2024</p>
+            </div>
+            <h2 class="item-total"> R$ 1.000,00 </h2>
+        </section>
+        
+        <section class="items">
+            <button> D </button>
+            <div class="item-description">
+                <h3>Energia Enel</h3>
+                <p>Data: 25/10/2024</p>
+            </div>
+            <h2 class="item-total"> R$ 1.000,00 </h2>
+        </section>
+    </div>
+
+    <style>
+        body{
+            background-color: #fff;
+            max-width: 400px;
+            margin: auto;
+        }
+        .container{
+            padding: 20px;
+            margin-top: 20px;
+            border-radius: 10px;
+            color: #fff;
+            background-color: #000;
+        }
+        img{ 
+            width: 35px; 
+            height: 37px; 
+            cursor: pointer;
+            transition: 1s;
+        }
+        img:hover{
+            border-radius: 50%;
+            border: 2px solid white;
+        }
+        header{
+            padding: 20px;
+
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .balance{
+            height: 80px;
+            padding: 20px;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background-color: #1d1d1d;
+        }
+        .balance-item{
+            display: flex;
+            align-items: start;
+            flex-direction: column;
+        }
+        section.items{
+            background-color: #1d1d1d;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 10px;
+            margin: 20px 0;
+            border-radius: 10px;
+
+            transition: .3s;
+        }
+        section.items:hover{
+            cursor: pointer;
+            background-color: green;
+        }
+        section.items button{
+            border: none;
+            height: 50px;
+            width: 50px;
+            color: #fff;
+            font-size: 1.5em;
+            border-radius: 50%;
+            background-color: #000;
+        }
+    </style>
+</body>
+</html>
